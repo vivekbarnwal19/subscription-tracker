@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import { JWT_EXPIRES_IN, JWT_SECRET } from '../config/env.js';
 import jwt from 'jsonwebtoken';
 
+
 //What is req body -> req.body is an object containing data from the client(POST request)
 
 export const signUp = async (req, res , next) => {
