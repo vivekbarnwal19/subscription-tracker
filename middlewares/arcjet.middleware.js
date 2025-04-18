@@ -1,6 +1,8 @@
 import aj from '../config/arcjet.js';
+import { NODE_ENV } from '../config/env.js';
 
 const arcjetMiddleware = async (req , res, next) =>{
+    if (NODE_ENV === 'development') return next();
     try {
         const decision = await aj.protect(req, { requested: 1});
 
